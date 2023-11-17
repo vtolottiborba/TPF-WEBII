@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+#body-index {
+    background-image: url('../img/background_index.jpg');   
+
+}
+
+#body-chat {
+    flex-grow: 1;
+    background-color: rgb(77, 194, 232);
+    z-index: 2;
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.content-wrapper {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.titre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.titre div {
+    position: relative;
+    font-size: 100px; 
+    font-weight: bold;
+    color: blue;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-shadow: -3px -3px 3px #000, 3px -3px 3px #000, -3px 3px 3px #000, 3px 3px 3px #000;
+}
+
+.container {
+    background-color: whitesmoke;
+    border:3px solid #333;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.sign-in-input-group {
+    margin-bottom: 10px;
+}
+
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.ball {
+	position:absolute;
+	top:5px;
+	width:64px;
+	height:64px;
+	background-image:url('../img/ball.png');
+}
+
+#bottom-bar {
+    background-color: lightblue; 
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#sign-out-btn {
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: fit-content;
+}
+
+textarea {
+    flex-grow: 1;
+    margin-right: 10px;
+    max-width: calc(100% - 120px);
+}
+
+#vue-container {
+    background-image: url('../img/background-chat.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#scoreboard {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+#custom-ball {
+    top: 475px;
+    left: 735px;
+}
+
+#suarez {
+    position: absolute;
+    top: 270px;
+    left: 280px;
+    width: 40%;
+    height: 40%;
+    background-image: url('../img/suarez.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+
+}
+
+.gk_0 {
+    position: absolute;
+    top: 330px;
+    left: 720px;
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/gk_pos0.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gk_1 {
+    position: absolute;
+    top: 330px;
+    left: 600px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/gk_pos1.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gk_2 {
+    position: absolute;
+    top: 280px;
+    left: 600px;
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/gk_pos2.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gk_3 {
+    position: absolute;
+    top: 400px;
+    left: 740px;
+    width: 220px;
+    height: 220px;
+    background-image: url('../img/gk_pos3.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gk_4 {
+    position: absolute;
+    top: 290px;
+    left: 750px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/gk_pos4.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+
+
+
