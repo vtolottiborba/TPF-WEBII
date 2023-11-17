@@ -1,28 +1,22 @@
 export default class PenaltyKick {
+    static score = 0
     constructor(command) {
         this.nodeBall = document.getElementById("custom-ball")
-        //this.nodeField = document.getElementById("vue-container")
         this.nodeScore = document.getElementById("scoreboard")
         this.nodeGK = document.querySelector(".gk_0")
-        //this.inputNode = document.getElementById("bottom-bar")
+        this.inputNode = document.querySelector("textarea")
         this.imageNode = document.getElementById("background-image")
 
-
         this.GK = Math.floor(Math.random() * 5)
-        //this.nodeGK.classList.add("gk_" + this.GK)
         
         this.x = this.nodeBall.offsetLeft
         this.y = this.nodeBall.offsetTop
 
-        this.score = 0
         this.kickJoueur = 0
         this.game = false
-
         this.speed = 4
-        
 
-
-        this.command = command.trim().toLowerCase()
+        this.command = command.trim().toLowerCase()       
 
         if (!this.game) {
             this.game = true
@@ -45,22 +39,14 @@ export default class PenaltyKick {
             } 
 
             if (this.kickJoueur != this.GK) {
-                this.score++
-                this.nodeScore.innerHTML = this.score
+                PenaltyKick.score++
+                this.nodeScore.innerHTML = PenaltyKick.score
                 this.randomImageGoal = Math.floor(Math.random() * 3)
                 setTimeout(() => {
                     this.imageNode.style.zIndex = 2;
                     this.imageNode.style.backgroundImage = "url('./img/goal_" + this.randomImageGoal + ".jpg')"
                     setTimeout(() => {
-                        this.imageNode.style.backgroundImage = "none"
-                        this.y = 475
-                        this.x = 735
-                        this.nodeBall.style.top = this.y + "px" 
-                        this.nodeBall.style.left = this.x + "px"
-                        this.nodeGK.classList.remove("gk_" + this.GK)
-                        this.nodeGK.classList.add("gk_0")
-                        this.game = false;
-                        this.tick()
+                        this.resetGame()
                     }, 4000)
                 }, 2000)
             } else { 
@@ -68,24 +54,27 @@ export default class PenaltyKick {
                     this.imageNode.style.zIndex = 2;
                     this.imageNode.style.backgroundImage = "url('./img/lost.jpg')"
                     setTimeout(() => {
-                        this.imageNode.style.backgroundImage = "none"
-                        this.y = 475
-                        this.x = 735
-                        this.nodeBall.style.top = this.y + "px" 
-                        this.nodeBall.style.left = this.x + "px"
-                        this.nodeGK.classList.remove("gk_" + this.GK)
-                        this.nodeGK.classList.add("gk_0")
-                        this.game = false;
-                        this.tick()
+                        this.resetGame()
                     }, 4000)
                 }, 2000)
     
             } 
         }
     }
+
+    resetGame() {
+        this.imageNode.style.zIndex = 0;
+        this.imageNode.style.backgroundImage = "none"
+        this.y = 475
+        this.x = 735
+        this.nodeBall.style.top = this.y + "px" 
+        this.nodeBall.style.left = this.x + "px"
+        this.nodeGK.classList.remove("gk_" + this.GK)
+        this.nodeGK.classList.add("gk_0")
+        this.game = false;
+        this.tick()
+    }
          
-
-
     tick() {
 
         if (this.game) {
@@ -124,7 +113,7 @@ export default class PenaltyKick {
                 }
             }
 
-    }
+        }
 
     }
 }
