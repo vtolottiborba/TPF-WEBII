@@ -1,11 +1,18 @@
 export default class PenaltyKick {
-    static score = 0
+    static scoreGremio = 0
+    static scoreVisitor = 0
     constructor(command) {
         this.nodeBall = document.getElementById("custom-ball")
-        this.nodeScore = document.getElementById("scoreboard")
+        this.nodeScoreGremio = document.getElementById("gremio-score")
+        this.nodeScoreVisitor = document.getElementById("visitor-score")
         this.nodeGK = document.querySelector(".gk_0")
         this.inputNode = document.querySelector("textarea")
         this.imageNode = document.getElementById("background-image")
+        this.goalSound = document.getElementById("goalSound")
+        this.lostSound = document.getElementById("lostSound")
+        this.suarezNode = document.getElementById("suarez")
+        this.suarezX = 22
+        this.suarezMove = 5
 
         this.GK = Math.floor(Math.random() * 5)
         
@@ -20,6 +27,12 @@ export default class PenaltyKick {
 
         if (!this.game) {
             this.game = true
+
+            this.suarezNode.style.left = (this.suarezX + this.suarezMove) + "vw"
+
+            setTimeout(() => {
+                this.suarezNode.style.left = this.suarezX + "vw"
+            }, 200)
 
             if (this.command == "test1") {
                 this.kickJoueur = 1
@@ -39,20 +52,24 @@ export default class PenaltyKick {
             } 
 
             if (this.kickJoueur != this.GK) {
-                PenaltyKick.score++
-                this.nodeScore.innerHTML = PenaltyKick.score
+                PenaltyKick.scoreGremio++
+                this.nodeScoreGremio.innerHTML = PenaltyKick.scoreGremio
                 this.randomImageGoal = Math.floor(Math.random() * 3)
                 setTimeout(() => {
-                    this.imageNode.style.zIndex = 2;
+                    this.imageNode.style.zIndex = 2
                     this.imageNode.style.backgroundImage = "url('./img/goal_" + this.randomImageGoal + ".jpg')"
+                    this.goalSound.play()
                     setTimeout(() => {
                         this.resetGame()
                     }, 4000)
                 }, 2000)
             } else { 
+                PenaltyKick.scoreVisitor++
+                this.nodeScoreVisitor.innerHTML = PenaltyKick.scoreVisitor
                 setTimeout(() => {
-                    this.imageNode.style.zIndex = 2;
+                    this.imageNode.style.zIndex = 2
                     this.imageNode.style.backgroundImage = "url('./img/lost.jpg')"
+                    this.lostSound.play()
                     setTimeout(() => {
                         this.resetGame()
                     }, 4000)
@@ -63,17 +80,18 @@ export default class PenaltyKick {
     }
 
     resetGame() {
-        this.imageNode.style.zIndex = 0;
+        this.imageNode.style.zIndex = 0
         this.imageNode.style.backgroundImage = "none"
-        this.y = 475
-        this.x = 735
-        this.nodeBall.style.top = this.y + "px" 
-        this.nodeBall.style.left = this.x + "px"
+        this.y = 68
+        this.x = 48
+        this.nodeBall.style.top = this.y + "vh" 
+        this.nodeBall.style.left = this.x + "vw"
         this.nodeGK.classList.remove("gk_" + this.GK)
         this.nodeGK.classList.add("gk_0")
-        this.game = false;
+        this.game = false
         this.tick()
     }
+
          
     tick() {
 

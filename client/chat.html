@@ -9,8 +9,23 @@
         <link rel="icon" href="img/favicon.png" type="image/png" />
     </head>
     <body id="body-chat">
+        <audio id="goalSound">
+            <source src="./sound/goal.mp3" type="audio/mp3">
+        </audio>
+        <audio id="lostSound">
+            <source src="./sound/lost.mp3" type="audio/mp3">
+        </audio>
         <div id="background-image"></div>
-        <div id="scoreboard">0</div>
+        <div id="scoreboard">
+            <div class="score_1">
+                <div class="team" id="gremio">GRÊMIO F.B.P.A</div>
+                <div class="score" id="gremio-score">0</div>
+            </div>
+            <div class="score_1">
+                <div class="team" id="visitor">Visiteur</div>
+                <div class="score" id="visitor-score">0</div>
+            </div>
+        </div>
 		<div id="vue-container"></div>
         <div id="custom-ball" class="ball"></div>
         <div id="suarez"></div>
@@ -20,5 +35,10 @@
             <textarea cols="30" rows="10"></textarea>
             <a href="javascript:void(0)" id="sign-out-btn">Déconnexion</a>
         </div>
+
+        <div class="box" id="chat-box"></div>
+    
+        <div class="box" id="members-box"></div>
+
     </body>
 </html>

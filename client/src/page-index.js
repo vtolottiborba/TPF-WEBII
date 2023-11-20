@@ -13,19 +13,19 @@ window.addEventListener("load", () => {
     document.onkeyup = event => {
         if (event.key == " " || event.key == "Tab") {
             if (bodyBackground) {
-                bodyNode.style.backgroundImage = "url('./img/background_index_1.jpg')";
-                bodyBackground = false;
+                bodyNode.style.backgroundImage = "url('./img/background_index_1.jpg')"
+                bodyBackground = false
             } else {
-                bodyNode.style.backgroundImage = "url('./img/background_index.jpg')";
-                bodyBackground = true;
+                bodyNode.style.backgroundImage = "url('./img/background_index.jpg')"
+                bodyBackground = true
             }
         }
     }
  
     bodyNode.onmousemove = event => {
-        let mouseX = (event.clientX / window.innerWidth) * 2;
-        let mouseY = (event.clientY / window.innerHeight) * 2;
-        bodyNode.style.backgroundPosition = mouseX * 50 + '% ' + mouseY * 50 + '%';
+        let mouseX = (event.clientX / window.innerWidth) * 2
+        let mouseY = (event.clientY / window.innerHeight) * 2
+        bodyNode.style.backgroundPosition = mouseX * 50 + '% ' + mouseY * 50 + '%'
     }
 
     for (let i = 1; i <= LETTRE_COUNT; i++) {

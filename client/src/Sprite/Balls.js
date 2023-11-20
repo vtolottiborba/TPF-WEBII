@@ -2,8 +2,8 @@ export default class Balls {
     constructor(x, y) {
         this.node = document.createElement('div')
         this.node.classList.add("ball")
-        this.x = x;
-        this.y = y;
+        this.x = x
+        this.y = y
         this.node.style.left = this.x + "px"
         this.node.style.top = this.y + "px"
         this.random = Math.floor(Math.random() * 4) + 1
@@ -27,15 +27,15 @@ export default class Balls {
 
         }
         
-        this.speedX = Math.random() * 2.5;
-        this.speedY = Math.random() * 2.5;
+        this.speedX = Math.random() * 2.5
+        this.speedY = Math.random() * 2.5
 
     }
 
     tick() {
 
-        this.x += this.speedX;
-        this.y += this.speedY;
+        this.x += this.speedX
+        this.y += this.speedY
 
         
         if (this.x < 0 || this.x > window.innerWidth) {

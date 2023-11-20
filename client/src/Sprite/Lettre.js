@@ -5,9 +5,8 @@ export default class Lettre {
         this.y = this.node.offsetTop
         this.node.style.opacity = 0
         this.speed = 0.009
-        this.originalColor = "blue";
+        this.originalColor = "blue"
 
-        console.log(this.y)
         
         this.node.onmouseover = () => {
             this.speed = -0.009         
@@ -23,11 +22,11 @@ export default class Lettre {
 
         setInterval(() => {
             if (this.node.style.color == this.originalColor) {
-                this.node.style.color = "white";
+                this.node.style.color = "white"
             } else {
-                this.node.style.color = this.originalColor;
+                this.node.style.color = this.originalColor
             }
-        }, 2000);
+        }, 2000)
         
     }
 
