@@ -34,13 +34,13 @@ export default class PenaltyKick {
                 this.suarezNode.style.left = this.suarezX + "vw"
             }, 200)
 
-            if (this.command == "test1") {
+            if (this.command == "kick1") {
                 this.kickJoueur = 1
-            } else if (this.command == "test2") {
+            } else if (this.command == "kick2") {
                 this.kickJoueur = 2
-            } else if (this.command == "test3") {
+            } else if (this.command == "kick3") {
                 this.kickJoueur = 3
-            }else if (this.command == "test4") {
+            }else if (this.command == "kick4") {
                 this.kickJoueur = 4
             } else {
                 this.kickJoueur = 0

@@ -26,7 +26,7 @@ export default class Lettre {
             } else {
                 this.node.style.color = this.originalColor
             }
-        }, 2000)
+        }, 1000)
         
     }
 
