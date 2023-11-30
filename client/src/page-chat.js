@@ -2,7 +2,6 @@ import {registerCallbacks, sendMessage, signout, chatMessageLoop} from './chat-a
 import PenaltyKick from './Sprite/PenaltyKick.js';
 let spriteList = []
 
-
 window.addEventListener("load", () => {
     document.querySelector("textarea").onkeyup = function (evt) {
         if (evt.key == "Enter") {

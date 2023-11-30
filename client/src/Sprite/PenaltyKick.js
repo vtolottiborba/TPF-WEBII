@@ -11,7 +11,7 @@ export default class PenaltyKick {
         this.goalSound = document.getElementById("goalSound")
         this.lostSound = document.getElementById("lostSound")
         this.suarezNode = document.getElementById("suarez")
-        this.suarezX = 22
+        this.suarezX = 20
         this.suarezMove = 5
 
         this.GK = Math.floor(Math.random() * 5)
@@ -23,15 +23,16 @@ export default class PenaltyKick {
         this.game = false
         this.speed = 4
 
-        this.command = command.trim().toLowerCase()       
+        this.command = command.trim().toLowerCase()  
+
 
         if (!this.game) {
             this.game = true
 
-            this.suarezNode.style.left = (this.suarezX + this.suarezMove) + "vw"
+            this.suarezNode.style.left = (this.suarezX + this.suarezMove) + "%"
 
             setTimeout(() => {
-                this.suarezNode.style.left = this.suarezX + "vw"
+                this.suarezNode.style.left = this.suarezX + "%"
             }, 200)
 
             if (this.command == "kick1") {
@@ -84,8 +85,8 @@ export default class PenaltyKick {
         this.imageNode.style.backgroundImage = "none"
         this.y = 68
         this.x = 48
-        this.nodeBall.style.top = this.y + "vh" 
-        this.nodeBall.style.left = this.x + "vw"
+        this.nodeBall.style.top = this.y + "%" 
+        this.nodeBall.style.left = this.x + "%"
         this.nodeGK.classList.remove("gk_" + this.GK)
         this.nodeGK.classList.add("gk_0")
         this.game = false
@@ -97,37 +98,37 @@ export default class PenaltyKick {
 
         if (this.game) {
             if (this.kickJoueur == 0) {
-                if (this.y > 300) {
+                if (this.y > window.innerHeight*0.48) {
                     this.y -= this.speed
-                    this.nodeBall.style.top = this.y + "px"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
                 }
             } else if (this.kickJoueur == 1) {
-                if (this.y > 400) {
+                if (this.y > window.innerHeight*0.56) {
                     this.y -= this.speed
                     this.x -= this.speed*2
-                    this.nodeBall.style.top = this.y + "px"
-                    this.nodeBall.style.left = this.x + "px"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
                 }
             } else if (this.kickJoueur == 2) {
-                if (this.y > 300) {
+                if (this.y > window.innerHeight*0.4) {
                     this.y -= this.speed
                     this.x -= this.speed
-                    this.nodeBall.style.top = this.y + "px"
-                    this.nodeBall.style.left = this.x + "px"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
                 }
             } else if (this.kickJoueur == 3) {
-                if (this.y > 300) {
+                if (this.y > window.innerHeight*0.4) {
                     this.y -= this.speed
                     this.x += this.speed
-                    this.nodeBall.style.top = this.y + "px"
-                    this.nodeBall.style.left = this.x + "px"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
                 }
             } else if (this.kickJoueur == 4) {
-                if (this.y > 400) {
+                if (this.y > window.innerHeight*0.56) {
                     this.y -= this.speed
                     this.x += this.speed*2
-                    this.nodeBall.style.top = this.y + "px"
-                    this.nodeBall.style.left = this.x + "px"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
                 }
             }
 
