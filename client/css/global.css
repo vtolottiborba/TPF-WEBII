@@ -110,15 +110,23 @@ button:hover {
 
 .ball {
 	position:absolute;
-	width:50px;
-	height:50px;
+    width: 7.5vw;
+    height: 7.5vh;
 	background-image:url('../img/ball.png');
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#custom-ball {
+    top: 67.5vh;
+    left: 48vw;
 }
 
 #bottom-bar {
     background-color: lightblue; 
     padding: 10px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     position: absolute;
@@ -194,21 +202,12 @@ textarea {
     font-size: 24px; 
 }
 
-#custom-ball {
-	top: 68%;
-	left: 48%;
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
 #suarez {
     position: absolute;
-	top: 43%;
-    left: 20%;
-    width: 40%;
-    height: 40%;
+    top: 37vh;
+    left: 20vw;
+    width: 40vw;
+    height: 40vh;
     background-image: url('../img/suarez.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -217,10 +216,10 @@ textarea {
 
 .gk_0 {
     position: absolute;
-	top: 46%;
-    left: 48%;
-    width: 150px;
-    height: 150px;
+    top: 47vh;
+    left: 47vw;
+    width: 20vw;
+    height: 20vh;
     background-image: url('../img/gk_pos0.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -228,10 +227,10 @@ textarea {
 
 .gk_1 {
     position: absolute;
-	top: 49%;
-    left: 38%;
-    width: 200px;
-    height: 200px;
+    top: 47vh;
+    left: 38vw;
+    width: 20vw;
+    height: 20vh;
     background-image: url('../img/gk_pos1.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -239,10 +238,10 @@ textarea {
 
 .gk_2 {
     position: absolute;
-	top: 40%;
-    left: 38%;
-    width: 150px;
-    height: 150px;
+    top: 42vh;
+    left: 37vw;
+    width: 22vw;
+    height: 22vh;
     background-image: url('../img/gk_pos2.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -250,10 +249,10 @@ textarea {
 
 .gk_3 {
     position: absolute;
-	top: 39%;
-    left: 52%;
-    width: 200px;
-    height: 200px;
+    top: 36vh;
+    left: 49vw;
+    width: 22vw;
+    height: 22vh;
     background-image: url('../img/gk_pos3.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -261,10 +260,10 @@ textarea {
 
 .gk_4 {
     position: absolute;
-	top: 52%;
-    left: 49%;
-    width: 220px;
-    height: 220px;
+    top: 50vh;
+    left: 46vw;
+    width: 16vw;
+    height: 16vh;
     background-image: url('../img/gk_pos4.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -276,26 +275,19 @@ textarea {
     border-radius: 10px;
     margin: 10px;
     position: absolute; 
-    top: 10px; 
+    top: 2vh; 
     z-index: 2;
     word-wrap: break-word;
     overflow-y: auto;
-    max-height: 500px;
+    max-height: 500vh;
 }
 
 #chat-box {
-    right: 12%;
-    width: 20%; 
+    right: 12vw;
+    width: 20vw; 
 }
 
 #members-box {
-    top: 10px;
-    right: 10px; 
-    width: 10%;
+    right: 0; 
+    width: 10vw;
 }
-
-
-
-
-
-

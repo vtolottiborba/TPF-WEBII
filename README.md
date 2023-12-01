@@ -1,6 +1,6 @@
 # VINÍCIUS TOLOTTI BORBA
 ## PROJET FINAL WEBII
-## JEU "PENALTY KICK"
+### JEU "PENALTY KICK"
 
 ### Page "Index"
 SetInterval - Les lettres changent de couleur toutes les 1000 ms (bleu – blanc)

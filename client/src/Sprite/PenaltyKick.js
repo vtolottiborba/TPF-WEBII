@@ -29,10 +29,10 @@ export default class PenaltyKick {
         if (!this.game) {
             this.game = true
 
-            this.suarezNode.style.left = (this.suarezX + this.suarezMove) + "%"
+            this.suarezNode.style.left = (this.suarezX + this.suarezMove) + "vw"
 
             setTimeout(() => {
-                this.suarezNode.style.left = this.suarezX + "%"
+                this.suarezNode.style.left = this.suarezX + "vw"
             }, 200)
 
             if (this.command == "kick1") {
@@ -83,10 +83,10 @@ export default class PenaltyKick {
     resetGame() {
         this.imageNode.style.zIndex = 0
         this.imageNode.style.backgroundImage = "none"
-        this.y = 68
+        this.y = 67.5
         this.x = 48
-        this.nodeBall.style.top = this.y + "%" 
-        this.nodeBall.style.left = this.x + "%"
+        this.nodeBall.style.top = this.y + "vh" 
+        this.nodeBall.style.left = this.x + "vw"
         this.nodeGK.classList.remove("gk_" + this.GK)
         this.nodeGK.classList.add("gk_0")
         this.game = false
@@ -100,35 +100,35 @@ export default class PenaltyKick {
             if (this.kickJoueur == 0) {
                 if (this.y > window.innerHeight*0.48) {
                     this.y -= this.speed
-                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
                 }
             } else if (this.kickJoueur == 1) {
                 if (this.y > window.innerHeight*0.56) {
                     this.y -= this.speed
                     this.x -= this.speed*2
-                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
-                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "vw"
                 }
             } else if (this.kickJoueur == 2) {
                 if (this.y > window.innerHeight*0.4) {
                     this.y -= this.speed
                     this.x -= this.speed
-                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
-                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "vw"
                 }
             } else if (this.kickJoueur == 3) {
                 if (this.y > window.innerHeight*0.4) {
                     this.y -= this.speed
                     this.x += this.speed
-                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
-                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "vw"
                 }
             } else if (this.kickJoueur == 4) {
                 if (this.y > window.innerHeight*0.56) {
                     this.y -= this.speed
                     this.x += this.speed*2
-                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "%"
-                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "%"
+                    this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
+                    this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "vw"
                 }
             }
 
