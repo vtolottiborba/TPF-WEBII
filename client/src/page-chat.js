@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 const newMessage = (fromUser, message, isPrivate) => {
     let chatBox = document.getElementById("chat-box")
     console.log(fromUser, message, isPrivate);
-    chatBox.innerHTML += "<p><strong>" + fromUser+ ":</strong>" + message + "</p>"
+    chatBox.innerHTML += "<p><strong>" + fromUser+ ":</strong>" +" "+ message + "</p>"
     chatBox.scrollTop = chatBox.scrollHeight
 }
 
@@ -31,7 +31,7 @@ const newMessage = (fromUser, message, isPrivate) => {
 const memberListUpdate = members => {
     let memberBox = document.getElementById("members-box")
     console.log(members);
-    memberBox.innerHTML = "<h4>Members List</h4>"
+    memberBox.innerHTML = "<h4>Members List:</h4>"
     members.forEach(member => {
         memberBox.innerHTML += "<p>" + member + "</p>"
     });

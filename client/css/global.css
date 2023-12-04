@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
 * {
     margin:0;
@@ -110,8 +112,8 @@ button:hover {
 
 .ball {
 	position:absolute;
-    width: 7.5vw;
-    height: 7.5vh;
+    width: 6vw;
+    height: 6vh;
 	background-image:url('../img/ball.png');
     z-index: 1;
     background-repeat: no-repeat;
@@ -119,7 +121,7 @@ button:hover {
 }
 
 #custom-ball {
-    top: 67.5vh;
+    top: 60vh;
     left: 48vw;
 }
 
@@ -171,6 +173,7 @@ textarea {
     border: 2px solid white;
     padding: 10px;
     font-size: 20px;
+    font-family: 'Oxanium', sans-serif;
     z-index: 1;
     display: flex;
     flex-direction: column; 
@@ -187,7 +190,7 @@ textarea {
 }
 
 #gremio {
-    margin-right: 40px;
+    margin-right: 53.5px;
 }
 
 #visitor {
@@ -204,7 +207,7 @@ textarea {
 
 #suarez {
     position: absolute;
-    top: 37vh;
+    top: 42vh;
     left: 20vw;
     width: 40vw;
     height: 40vh;
@@ -216,10 +219,10 @@ textarea {
 
 .gk_0 {
     position: absolute;
-    top: 47vh;
+    top: 40vh;
     left: 47vw;
-    width: 20vw;
-    height: 20vh;
+    width: 18vw;
+    height: 18vh;
     background-image: url('../img/gk_pos0.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -227,10 +230,10 @@ textarea {
 
 .gk_1 {
     position: absolute;
-    top: 47vh;
-    left: 38vw;
-    width: 20vw;
-    height: 20vh;
+    top: 40vh;
+    left: 35vw;
+    width: 18vw;
+    height: 18vh;
     background-image: url('../img/gk_pos1.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -238,10 +241,10 @@ textarea {
 
 .gk_2 {
     position: absolute;
-    top: 42vh;
+    top: 38vh;
     left: 37vw;
-    width: 22vw;
-    height: 22vh;
+    width: 18vw;
+    height: 18vh;
     background-image: url('../img/gk_pos2.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -249,10 +252,10 @@ textarea {
 
 .gk_3 {
     position: absolute;
-    top: 36vh;
+    top: 35vh;
     left: 49vw;
-    width: 22vw;
-    height: 22vh;
+    width: 18vw;
+    height: 18vh;
     background-image: url('../img/gk_pos3.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -260,10 +263,10 @@ textarea {
 
 .gk_4 {
     position: absolute;
-    top: 50vh;
-    left: 46vw;
-    width: 16vw;
-    height: 16vh;
+    top: 46vh;
+    left: 48vw;
+    width: 17vw;
+    height: 17vh;
     background-image: url('../img/gk_pos4.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -280,10 +283,12 @@ textarea {
     word-wrap: break-word;
     overflow-y: auto;
     max-height: 500vh;
+    font-family: 'Prompt', sans-serif;
+    font-size: 12px;
 }
 
 #chat-box {
-    right: 12vw;
+    right: 10.5vw;
     width: 20vw; 
 }
 

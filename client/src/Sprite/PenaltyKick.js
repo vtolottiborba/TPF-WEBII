@@ -15,7 +15,8 @@ export default class PenaltyKick {
         this.suarezMove = 5
 
         this.GK = Math.floor(Math.random() * 5)
-        
+        //this.GK = 4
+
         this.x = this.nodeBall.offsetLeft
         this.y = this.nodeBall.offsetTop
 
@@ -83,7 +84,7 @@ export default class PenaltyKick {
     resetGame() {
         this.imageNode.style.zIndex = 0
         this.imageNode.style.backgroundImage = "none"
-        this.y = 67.5
+        this.y = 60
         this.x = 48
         this.nodeBall.style.top = this.y + "vh" 
         this.nodeBall.style.left = this.x + "vw"
@@ -98,12 +99,12 @@ export default class PenaltyKick {
 
         if (this.game) {
             if (this.kickJoueur == 0) {
-                if (this.y > window.innerHeight*0.48) {
+                if (this.y > window.innerHeight*0.4) {
                     this.y -= this.speed
                     this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
                 }
             } else if (this.kickJoueur == 1) {
-                if (this.y > window.innerHeight*0.56) {
+                if (this.y > window.innerHeight*0.5) {
                     this.y -= this.speed
                     this.x -= this.speed*2
                     this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
@@ -124,7 +125,7 @@ export default class PenaltyKick {
                     this.nodeBall.style.left = (this.x/window.innerWidth) * 100 + "vw"
                 }
             } else if (this.kickJoueur == 4) {
-                if (this.y > window.innerHeight*0.56) {
+                if (this.y > window.innerHeight*0.5) {
                     this.y -= this.speed
                     this.x += this.speed*2
                     this.nodeBall.style.top = (this.y/window.innerHeight) * 100 + "vh"
