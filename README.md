@@ -6,7 +6,7 @@
 SetInterval - Les lettres changent de couleur toutes les 1000 ms (bleu – blanc)
 onmouseover – lorsque la souris survole une lettre, elle « saute » et change d’opacité (devient pâle)
 onmouseout – la lettre retourne à sa position initiale et la couleur reprend son opacité d'origine
-Ookeyup – si la touche « espace » ou « tab » est pressée, 'backgroundImage' change
+Onkeyup – si la touche « espace » ou « tab » est pressée, 'backgroundImage' change
 onmousemove – 'backgroundImage' se déplace selon le mouvement de la souris
 
 ### Page "Register"

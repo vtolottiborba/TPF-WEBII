@@ -18,17 +18,16 @@ body {
 
 #body-index {
     background-image: url('../img/background_index.jpg');   
-
 }
 
 #body-chat {
+    /* position: absolute; */
     flex-grow: 1;
     background-color: rgb(77, 194, 232);
-    z-index: 2;
 }
 
 #background-image {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -112,6 +111,7 @@ button:hover {
 
 .ball {
 	position:absolute;
+    /* position:relative; */
     width: 6vw;
     height: 6vh;
 	background-image:url('../img/ball.png');
@@ -122,34 +122,11 @@ button:hover {
 
 #custom-ball {
     top: 60vh;
+    /* top: 40vh; */
     left: 48vw;
-}
-
-#bottom-bar {
-    background-color: lightblue; 
-    padding: 10px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-#sign-out-btn {
-    padding: 5px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    height: fit-content;
-}
-
-textarea {
-    flex-grow: 1;
-    margin-right: 10px;
-    max-width: calc(100% - 120px);
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
 }
 
 #vue-container {
@@ -159,7 +136,7 @@ textarea {
     background-position: top center;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -206,11 +183,17 @@ textarea {
 }
 
 #suarez {
-    position: absolute;
+    position:absolute;
+    /* position:relative; */
     top: 42vh;
+    /* top: 20vh; */
     left: 20vw;
     width: 40vw;
     height: 40vh;
+    /* top: 40%;
+    left: 20%;
+    width: 20%;
+    height: 20%; */
     background-image: url('../img/suarez.png'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -218,9 +201,13 @@ textarea {
 }
 
 .gk_0 {
-    position: absolute;
+    position:absolute;
+    /* position:relative; */
     top: 40vh;
+    /* top: 25vh; */
     left: 47vw;
+    /* top: 40%;
+    left: 60%; */
     width: 18vw;
     height: 18vh;
     background-image: url('../img/gk_pos0.png'); 
@@ -272,6 +259,37 @@ textarea {
     background-size: contain;
 }
 
+#bottom-bar {
+    background-color: lightblue; 
+    padding: 10px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#sign-out-btn {
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: fit-content;
+}
+
+#sign-out-btn:hover {
+    background-color: #555;
+}
+
+textarea {
+    flex-grow: 1;
+    margin-right: 10px;
+    max-width: calc(100% - 120px);
+}
+
 .box {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
@@ -279,12 +297,15 @@ textarea {
     margin: 10px;
     position: absolute; 
     top: 2vh; 
-    z-index: 2;
-    word-wrap: break-word;
-    overflow-y: auto;
-    max-height: 500vh;
+    z-index: 1;
+    max-height: 50vh;
     font-family: 'Prompt', sans-serif;
     font-size: 12px;
+}
+
+#chat-box, #members-box {
+    word-wrap: break-word;
+    overflow-y: auto;
 }
 
 #chat-box {
