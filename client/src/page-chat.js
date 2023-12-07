@@ -3,6 +3,9 @@ import PenaltyKick from './Sprite/PenaltyKick.js';
 let spriteList = []
 
 window.addEventListener("load", () => {
+    let nom = localStorage.getItem("username")
+    document.querySelector("#usager").innerText = nom
+
     document.querySelector("textarea").onkeyup = function (evt) {
         if (evt.key == "Enter") {
             let command = this.value

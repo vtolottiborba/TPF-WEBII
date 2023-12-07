@@ -36,6 +36,11 @@ window.addEventListener("load", () => {
 
 })
 
+const nomUsager = nom => {
+    localStorage.setItem("username", nom)
+    window.location.href="chat.html"
+}
+
 const tick = () => {
 
     for (let i = 0; i < spriteList.length; i++) {

@@ -124,9 +124,6 @@ button:hover {
     top: 60vh;
     /* top: 40vh; */
     left: 48vw;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
 
 #vue-container {
@@ -160,26 +157,17 @@ button:hover {
 .score_1 {
     display: flex;
     flex-direction: row; 
+    justify-content: space-between;
 }
 
-.team, .score {
-    margin-bottom: 10px;
-}
-
-#gremio {
-    margin-right: 53.5px;
-}
-
-#visitor {
-    margin-right: 125px;
-}
-
-#gremio, #visitor {
+#usager, #visitor {
+    margin-right: auto;
     font-weight: bold;
 }
 
-#gremio-score, #visitor-score {
+#usager-score, #visitor-score {
     font-size: 24px; 
+    margin-left: auto;
 }
 
 #suarez {
@@ -260,9 +248,10 @@ button:hover {
 }
 
 #bottom-bar {
-    background-color: lightblue; 
+    background-color: lightblue;
     padding: 10px;
     width: 100vw;
+    height: 20vh;
     display: flex;
     align-items: center;
     position: fixed;
@@ -278,42 +267,47 @@ button:hover {
     border-radius: 3px;
     cursor: pointer;
     height: fit-content;
+    margin-left: auto;
 }
 
 #sign-out-btn:hover {
     background-color: #555;
 }
 
-textarea {
-    flex-grow: 1;
-    margin-right: 10px;
-    max-width: calc(100% - 120px);
+.chat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
 }
 
-.box {
+textarea {
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 5px;
+}
+
+#chat-box,
+#members-box {
+    word-wrap: break-word;
+    overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 10px;
-    margin: 10px;
-    position: absolute; 
-    top: 2vh; 
-    z-index: 1;
-    max-height: 50vh;
     font-family: 'Prompt', sans-serif;
     font-size: 12px;
 }
 
-#chat-box, #members-box {
-    word-wrap: break-word;
-    overflow-y: auto;
-}
-
 #chat-box {
-    right: 10.5vw;
-    width: 20vw; 
+    width: 100%;
+    max-width: 81.5vw;
+    height: 15vh;
 }
 
 #members-box {
-    right: 0; 
-    width: 10vw;
+    width: 10%;
+    margin-right: 10px;
+    max-height: 18vh;
 }
+

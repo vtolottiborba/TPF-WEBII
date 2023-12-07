@@ -1,9 +1,9 @@
 export default class PenaltyKick {
-    static scoreGremio = 0
+    static scoreUsager = 0
     static scoreVisitor = 0
     constructor(command) {
         this.nodeBall = document.getElementById("custom-ball")
-        this.nodeScoreGremio = document.getElementById("gremio-score")
+        this.nodeScoreUsager = document.getElementById("usager-score")
         this.nodeScoreVisitor = document.getElementById("visitor-score")
         this.nodeGK = document.querySelector(".gk_0")
         this.inputNode = document.querySelector("textarea")
@@ -54,8 +54,8 @@ export default class PenaltyKick {
             } 
 
             if (this.kickJoueur != this.GK) {
-                PenaltyKick.scoreGremio++
-                this.nodeScoreGremio.innerHTML = PenaltyKick.scoreGremio
+                PenaltyKick.scoreUsager++
+                this.nodeScoreUsager.innerHTML = PenaltyKick.scoreUsager
                 this.randomImageGoal = Math.floor(Math.random() * 3)
                 setTimeout(() => {
                     this.imageNode.style.zIndex = 2
