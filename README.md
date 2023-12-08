@@ -21,5 +21,5 @@ Animation selon les commandes :
 - Kick4: un coup de pied dans le coin supérieur droit
 - Toute autre commande: un coup de pied droit et haut
 Le joueur (Luis Suárez) se déplace à chaque coup sur le ballon.
-Si le joueur marque un but, le tableau des scores marque pour GREMIO F.B.P.A., les supporters célèbrent et 'backgroundImage' change aléatoirement parmi 3 choix. Si le gardien défend la pénalité, le Visiteur augmente son score, les supporters sifflent et 'backgroundImage' change avec le joueur triste (setTimeOut).
+Si le joueur marque un but, le tableau des scores marque pour l'usager, les supporters célèbrent et 'backgroundImage' change aléatoirement parmi 3 choix. Si le gardien défend la pénalité, le Visiteur augmente son score, les supporters sifflent et 'backgroundImage' change avec le joueur triste (setTimeOut).
 La défense du gardien se fait de manière aléatoire, chaque position a son image qui change (remove, add)
